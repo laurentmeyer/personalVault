@@ -1,22 +1,6 @@
 {
-  "file-explorer:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "1"
-    }
-  ],
   "workspace:goto-tab-1": [],
   "workspace:goto-last-tab": [],
-  "tag-pane:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "0"
-    }
-  ],
   "app:go-back": [
     {
       "modifiers": [
@@ -77,5 +61,46 @@
       ],
       "key": "9"
     }
-  ]
+  ],
+  "workspace:goto-tab-2": [],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "1"
+    }
+  ],
+  "workspace:goto-tab-3": [],
+  "workspace:goto-tab-4": [],
+  "workspace:goto-tab-5": [],
+  "workspace:goto-tab-6": [],
+  "workspace:goto-tab-7": [],
+  "workspace:goto-tab-8": [],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "0"
+    }
+  ],
+  "editor:toggle-italics": [],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "I"
+    }
+  ],
+  "daily-notes": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ],
+  "editor:delete-paragraph": []
 }
