@@ -1,0 +1,14 @@
+---
+tags:
+  - article
+  - ai
+source: https://www.seangoedecke.com/cognitive-core/
+date: 2025-07-28
+---
+When you halve the size of a model, you don’t get a model that’s half as smart. If you do it right, you get a model that’s 90% as smart. As we learn how to make smarter big models, the smaller models get smarter too. The original GPT-3 was probably3 175B parameters. It got ~44% on the popular MMLU [benchmark](https://buttondown-0001.com/c/ZjZmZTgyZjctZWI2YS00ZDljLWI5YjktZDMxNzdiYTQ4Yjc1fGNiMGU5YmY4LWJhZDQtNDZkZi05NDUxLTk2NDViMDM0NDUyNnxodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NTUxVP3V0bV9zb3VyY2U9c2VhbmdvZWRlY2tlJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPWNhbi1zbWFsbC1haS1tb2RlbHMtdGhpbmstYXMtd2VsbC1hcy1sYXJnZS1vbmVzLThkMmF8ZW1haWw=), which covers a mix of SAT-style language, mathematics, and general knowledge. Today, Gemma 3B (58 times smaller) [gets](https://buttondown-0005.com/c/ZjZmZTgyZjctZWI2YS00ZDljLWI5YjktZDMxNzdiYTQ4Yjc1fGNiMGU5YmY4LWJhZDQtNDZkZi05NDUxLTk2NDViMDM0NDUyNnxodHRwczovL2xsbS1zdGF0cy5jb20vP3V0bV9zb3VyY2U9c2VhbmdvZWRlY2tlJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPWNhbi1zbWFsbC1haS1tb2RlbHMtdGhpbmstYXMtd2VsbC1hcy1sYXJnZS1vbmVzLThkMmF8ZW1haWw=) ~65% on the same benchmark.
+
+you can’t run Claude Sonnet 4 on your phone because your phone simply cannot fit all of the parameters in-memory in its GPU. To run inference, your phone would be spending all its time moving weights in and out of the GPU, and you’d be waiting ~30 seconds for each token
+
+Why _wouldn’t_ “cognitive core” work? What are the arguments against it? The main one is that **reasoning ability might require a lot of background knowledge**. It might turn out that we can’t create a model that’s as good as reasoning as Claude Sonnet 4 without knowing all the trivia that Claude Sonnet 4 knows, because “the ability to reason” turns out to be a complex relationship between many, many individual model weights
+
+Along the same lines, it might turn out that **reasoning ability requires many parameters**. One surprising result from Anthropic’s [AI interpretablity](https://buttondown-0004.com/c/ZjZmZTgyZjctZWI2YS00ZDljLWI5YjktZDMxNzdiYTQ4Yjc1fGNiMGU5YmY4LWJhZDQtNDZkZi05NDUxLTk2NDViMDM0NDUyNnxodHRwczovL3NlYW5nb2VkZWNrZS5jb20vYWktaW50ZXJwcmV0YWJpbGl0eT91dG1fc291cmNlPXNlYW5nb2VkZWNrZSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1jYW4tc21hbGwtYWktbW9kZWxzLXRoaW5rLWFzLXdlbGwtYXMtbGFyZ2Utb25lcy04ZDJhfGVtYWls) research is that larger models have better abstractions than smaller models. When you ask a small model questions about dogs, only the “dog” pattern of neurons lights up, but a large model has recognizable patterns for more abstract concepts like “animal” or “pet”. If good reasoning requires operating with broad abstractions, and you can’t fit broad abstractions into a small model, it might be impossible to produce a strong “cognitive core” model.
